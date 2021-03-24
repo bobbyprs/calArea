@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> shape </title>
+    </head>
+    <body>
+        <script>
+            class shape{
+constructor(){
+   
+
+}
+area(){
+
+    return " "
+}
+
+}
+
+class circle extends shape{
+constructor(radius){
+    super()
+this.r=radius
+}
+area(){
+
+return 3.14*this.r*this.r
+}
+}
+
+
+class rectangle extends shape{
+    constructor(length,width){
+        super()
+        this.l=length,
+        this.w=width
+        
+    }
+    area(){
+    return this.l*this.w
+    }
+    }
+    class triangle extends shape{
+        constructor(height,base){
+            super()
+            this.h=height
+            this.b=base
+            
+        }
+        area(){
+        return ((1/2)*this.h)*this.b
+        }
+    }
+
+
+
+        class square extends shape{
+            constructor(side){
+                super()
+                this.s=side
+                
+            }
+            area(){
+            return this.s*this.s
+            }
+        }
+
+
+            var cir= new circle(9)
+            var rect=new rectangle(6,10)
+            var tri= new triangle(15,8)
+            var squ= new square(29)
+
+            var arrofshapes=[cir.area(),rect.area(),tri.area(),squ.area()]
+            console.log("AREA OF CIRCLE IS  :",cir.area())
+            console.log("AREA OF RECTANGLE IS : ",rect.area(),)
+            console.log("AREA OF TRIANGLE IS : ",tri.area())
+            console.log("AREA OF SQUARE IS : ",squ.area())
+
+            console.log("ARRAY OF AREA OF SHAPES IS : ",arrofshapes)
+        var tot=0
+        arrofshapes.forEach(function(item){
+
+            tot=tot+item
+        })
+        console.log("CUMULATIVE AREA IS :",tot)
+        </script>
+    </body>
+</html>
